@@ -59,3 +59,13 @@ class Control:
             return e
 
         return pow(a, b)
+    
+    def mod(self, a, b): # 나눗셈 연산의 나머지를 리턴하는 함수 추가
+        try:
+            if(a == 0):
+                raise Exception("Divisor Error")
+            
+        except Exception as e:
+            return e
+
+        return a%b
