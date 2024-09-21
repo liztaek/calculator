@@ -40,7 +40,11 @@ class Control:
         return a/b
     
     def pow(self, a, b): # 제곱 연산 함수 추가
-        if(a == 0):
-            return 0
-        else:
-            return pow(a, b)
+        try:
+            if(a == 0):
+                raise Exception("Base Error")
+            
+        except Exception as e:
+            return e
+
+        return pow(a, b)
