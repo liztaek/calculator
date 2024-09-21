@@ -1,4 +1,4 @@
-# ch 5.2.1 ui.py
+# ch 6.6.1 ui.py
 from PyQt5.QtWidgets import (QApplication, QWidget, QPushButton, QVBoxLayout, 
                              QMessageBox, QPlainTextEdit, QHBoxLayout,
                              QLineEdit, QComboBox) # QLineEdit, QComboBox 추가
@@ -27,7 +27,7 @@ class View(QWidget):
         self.le2.setAlignment(QtCore.Qt.AlignRight)
 
         self.cb = QComboBox(self)
-        self.cb.addItems(['+', '-', '*', '/'])
+        self.cb.addItems(['+', '-', '*', '/', '^'])
 
         hbox_formular = QHBoxLayout()
         hbox_formular.addWidget(self.le1)
