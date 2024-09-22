@@ -1,11 +1,11 @@
-# ch 7.5.1 ctrl.py
+# ch 7.7.2 ctrl.py
 class Control:
 
     def __init__(self, view):
         self.view=view
         self.connectSignals()
 
-    def calculate(self):
+    def calculate(self): # ^.% 연산 기능 제거
         try: # 숫자가 아닌 값이 입력되었을 때도 프로그램이 동작하도록 예외 처리 구문 추가 
             num1 = float(self.view.le1.text()) # 첫 번째 라인 에디트에 입력된 숫자를 읽어 옴
             num2 = float(self.view.le2.text()) # 두 번째 라인 에디트에 입력된 숫자를 읽어 옴
@@ -19,10 +19,6 @@ class Control:
                 return f'{num1} * {num2} = {self.mul(num1, num2)}'
             elif operator == '/': 
                 return f'{num1} / {num2} = {self.div(num1, num2)}'
-            elif operator == '^': 
-                return f'{num1} ^ {num2} = {self.pow(num1, num2)}'
-            elif operator == '%': 
-                return f'{num1} % {num2} = {self.mod(num1, num2)}'
             else :
                 return "Calculation Error"
         except:
